@@ -19,10 +19,11 @@ html(lang='zh-CN')
         .form-group
           label(for='inputurl') url：
           input#inputurl.form-control(type='text', placeholder='url')
-        button.btn.btn-default(type='submit') Submit
+        button.btn.btn-default(type='button', onclick='crawl_url()') Submit
       br      
       textarea#htmlinfo.form-control(rows='5')
     // jQuery (necessary for Bootstrap's JavaScript plugins)
     script(src='javascripts/jquery.min.js')
     // Include all compiled plugins (below), or include individual files as needed
     script(src='javascripts/bootstrap.min.js')
+    script(src='javascripts/req.js')

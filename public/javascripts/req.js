@@ -1,6 +1,12 @@
 function onRet(str) {
     var obj = JSON.parse(str);
 
+    if (obj.hasOwnProperty('err')) {
+        $('#htmlinfo').val(obj.err);
+
+        return ;
+    }
+
     if (obj.hasOwnProperty('htmlinfo')) {
         $('#htmlinfo').val(obj.htmlinfo);
         
@@ -11,7 +17,7 @@ function onRet(str) {
 function crawl_url() {
     var url = $("#inputurl").val();
 
-    $.post('/ctrl/', {url: url}, function (data, status) {
+    $.post('/ctrl/crawl/', {url: url}, function (data, status) {
         onRet(data);
     });
 }
