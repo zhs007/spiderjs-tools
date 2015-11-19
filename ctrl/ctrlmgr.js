@@ -50,4 +50,5 @@ exports.BaseCtrl = BaseCtrl;
 exports.singleton = singleton;
 
 //
-exports.CTRLID_CRAWL    = 'crawl';
+exports.CTRLID_CRAWL = 'crawl';
+exports.CTRLID_PARSER = 'parser';

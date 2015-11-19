@@ -1,6 +1,7 @@
 "use strict";
 
 require('../ctrl/crawl/crawl');
+require('../ctrl/parser/parser');
 
 var ctrlmgr = require('../ctrl/ctrlmgr');
 var sessionmgr = require('../base/sessionmgr');

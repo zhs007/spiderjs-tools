@@ -21,3 +21,11 @@ function crawl_url() {
         onRet(data);
     });
 }
+
+function parser_code() {
+    var code = $("#inputcode").val();
+
+    $.post('/ctrl/parser/', {code: code}, function (data, status) {
+        onRet(data);
+    });
+}

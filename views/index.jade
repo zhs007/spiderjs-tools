@@ -19,9 +19,15 @@ html(lang='zh-CN')
         .form-group
           label(for='inputurl') url：
           input#inputurl.form-control(type='text', placeholder='url')
-        button.btn.btn-default(type='button', onclick='crawl_url()') Submit
-      br      
+        button.btn.btn-default(type='button', onclick='crawl_url()') crawl
+      br
       textarea#htmlinfo.form-control(rows='5')
+      br
+      form
+        .form-group
+          label(for='inputcode') code : 
+          textarea#inputcode.form-control(rows='5')
+        button.btn.btn-default(type='button', onclick='parser_code()') parser      
     // jQuery (necessary for Bootstrap's JavaScript plugins)
     script(src='javascripts/jquery.min.js')
     // Include all compiled plugins (below), or include individual files as needed
